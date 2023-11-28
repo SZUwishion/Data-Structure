@@ -7,9 +7,9 @@ struct BSTree {
   BSTree *right;
 };
 
-bool Search(BSTree *T, int key, BSTree *f, BSTree **p) {
+bool Search(BSTree *T, int key, BSTree *pre, BSTree **p) {
   if (!T) {
-    *p = f;
+    *p = pre;
     return false;
   } else if (key == T->data) {
     *p = T;
